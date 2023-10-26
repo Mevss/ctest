@@ -1,0 +1,82 @@
+@use 'abstracts' as s;
+
+body {
+    background: s.$primary;
+    background: linear-gradient(112deg, rgba(217, 201, 189, 1) 0%, rgba(235, 220, 205, 1) 49%, rgba(248, 233, 218, 1) 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    img {
+        max-width: 35%;
+        height: auto;
+    }
+}
+
+.container {
+    width: 66%;
+    height: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .chat-window {
+        width: 100%;
+        height: 70vh;
+        border-bottom: s.$base-border-radius solid s.$primary;
+        background-color: s.$chat;
+    }
+
+    .input-container {
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+
+        .user-input {
+            width: 15%;
+            padding: 10px;
+            font-size: s.$font-size-base;
+            margin: s.$base-margin 0 s.$base-margin;
+            padding: s.$base-padding;
+            border-radius: s.$base-border-radius;
+            border-width: s.$base-border-thickness;
+            background-color: s.$chat;
+        }
+
+        .message-input {
+            flex: 1.5;
+            padding: 10px;
+            font-size: s.$font-size-base;
+            margin: s.$base-margin 0 s.$base-margin;
+            padding: s.$base-padding;
+            border-radius: s.$base-border-radius;
+            border-width: s.$base-border-thickness;
+            background-color: s.$chat;
+        }
+
+        .send-button {
+            width: 15%;
+            padding: 10px;
+            font-size: s.$font-size-base;
+            margin: s.$base-margin 0 s.$base-margin;
+            padding: s.$base-padding;
+            border-radius: s.$base-border-radius;
+            border-width: s.$base-border-thickness;
+            background-color: s.$chat;
+            &:hover{
+                background-color: #47A025;
+            }
+        }
+    }
+}
